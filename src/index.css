@@ -1,13 +1,150 @@
-body {
+* {
+  border: 0px;
+  color: white;
+  background-color: rgb(14, 15, 15);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.navbar {
+  width: 80vw;
+  height: 80px;
+  background-color: rgb(14, 17, 17);
+  border-radius: 15px;
+  margin-top: 20px;
+  border: 2px solid rgb(23, 25, 25);
+  color: rgb(86, 88, 88);
+  position: fixed;
+  top: 10px;
+  z-index: 999;
+  box-shadow: 
+    0px 4px 12px 2px rgb(171, 76, 152),
+    0px 5px 16px 3px #364bde;
+}
+
+.icon-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left:10px;
+}
+
+.navbar h1 {
+  margin: 0;
+  padding-left: 15px;
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ab4c98, #f08644);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.icon-group {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+}
+
+.icon:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.card-text {
+  width: 80vw;
+  margin-left: 100px;
+  margin-top: 210px;
+  padding: 20px;
+  color: white;
+  font-size: 60px;
+  font-weight: 900;
+  font-family: 'Merriweather', serif;
+}
+
+.card-text h3 {
+  margin: 0;
+  margin-left: 0;
+  font-size: 30px;
+  background: linear-gradient(90deg, #f08644, #ab4c98);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  padding: 0;
+}
+
+p {
+  border: 0px;
+  margin: 0px;
+}
+
+.Carousel-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.text1-container {
+  width: 80vw;
+  display: flex;
+  justify-content: center; 
+  align-items: center;         
+  padding: 20px 0;
+  margin: 0 auto;
+  border-bottom: 3px solid transparent;
+}
+
+.text1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #f08644, #ab4c98);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 20px;
+  padding: 10px;
+}
+.text1-container {
+  position: relative; /* Ensure positioning for the pseudo-element */
+  width: 80vw; /* Ensure it matches your container width */
+  padding-bottom: 3px; /* Adjust padding to give space for the border */
+}
+
+.text1-container::after {
+  content: ''; /* Required for the pseudo-element */
+  position: absolute; /* Position it absolutely */
+  left: 0;
+  right: 0;
+  bottom: 0; /* Position it at the bottom */
+  height: 3px; /* Height of the border */
+  background: linear-gradient(to right, rgba(171, 76, 152, 0.8), rgba(240, 134, 68, 0.8)); /* Gradient colors */
 }
