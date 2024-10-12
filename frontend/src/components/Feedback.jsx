@@ -22,7 +22,7 @@ const FeedbackForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:5001/submit', {
+      const response = await fetch('https://portfolio-reactjs-2a40.onrender.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
