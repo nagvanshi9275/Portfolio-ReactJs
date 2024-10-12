@@ -25,26 +25,30 @@ const formSchema = new mongoose.Schema({
 
 const Form = mongoose.model('Form', formSchema);
 
-app.post('/submit', async (req, res) => {
-  const { name, university, phone, age, feedback, rating } = req.body; 
-
-  const formData = new Form({
-      name,
-      university,
-      phone,
-      age: Number(age),           
-      feedback,
-      rating: Number(rating),     
-  });
-
-  try {
-      await formData.save();
-      res.status(200).send({ message: 'Form data saved successfully!' });
-  } catch (error) {
-      res.status(500).send({ message: 'Error saving form data', error });
-  }
+// Route for the root path
+app.get('/', (req, res) => {
+    res.status(200).send({ message: 'Welcome to the Form Submission API!' });
 });
 
+app.post('/submit', async (req, res) => {
+    const { name, university, phone, age, feedback, rating } = req.body; 
+
+    const formData = new Form({
+        name,
+        university,
+        phone,
+        age: Number(age),           
+        feedback,
+        rating: Number(rating),     
+    });
+
+    try {
+        await formData.save();
+        res.status(200).send({ message: 'Form data saved successfully!' });
+    } catch (error) {
+        res.status(500).send({ message: 'Error saving form data', error });
+    }
+});
 
 app.listen(5001, () => {
     console.log("Listening on port 5001");
