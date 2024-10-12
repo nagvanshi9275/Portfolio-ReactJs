@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb+srv://jinang:helloworld@cluster0.sockwk5.mongodb.net/portfolio-app', {
+mongoose.connect('mongodb+srv://aashishsingh24032005:Jinang@cluster0.keias.mongodb.net/', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
